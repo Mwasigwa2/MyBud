@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <title>MyBud</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .header-1 {
+      background-color:#fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 400%;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    .section-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .image-container {
+      margin-right: 20px;
+    }
+    
+    .image-1 {
+      width: 510px;
+      height: auto;
+    }
+    
+    .text-container {
+      text-align: left;
+    }
+    
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      margin-bottom: 10px;
+      margin-top: 0%;
+      text-align: center;
+      font-size: 500%;
+    }
+    
+    .para-4 {
+      margin: 0;
+      font-size: 16px;
+      font-size: 110%;
+      padding-right: 10%;
+    }
+    
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 16px;
+      color: #fff;
+    }
+    
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    #customization-content {
+      display: none;
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #analytics-content {
+      display: none;
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #friends-content {
+      display: none;
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const profileButton = document.getElementById("profile-btn");
+      const customizationButton = document.getElementById("customization-btn");
+      const analyticsButton = document.getElementById("analytics-btn");
+      const friendsButton = document.getElementById("friends-btn");
+      const customizationContent = document.getElementById("customization-content");
+      const analyticsContent = document.getElementById("analytics-content");
+      const friendsContent = document.getElementById("friends-content");
+
+      profileButton.addEventListener("click", function() {
+        customizationContent.style.display = "none";
+        analyticsContent.style.display = "none";
+        friendsContent.style.display = "none";
+      });
+
+      customizationButton.addEventListener("click", function() {
+        customizationContent.style.display = "block";
+        analyticsContent.style.display = "none";
+        friendsContent.style.display = "none";
+      });
+
+      analyticsButton.addEventListener("click", function() {
+        customizationContent.style.display = "none";
+        analyticsContent.style.display = "block";
+        friendsContent.style.display = "none";
+      });
+
+      friendsButton.addEventListener("click", function() {
+        customizationContent.style.display = "none";
+        analyticsContent.style.display = "none";
+        friendsContent.style.display = "block";
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="header-1">
+    <h1>MyBud</h1>
+  </header>
+
+  <nav class="navbar">
+    <a href="#" id="profile-btn">Profile</a>
+    <a href="#" id="friends-btn">Buddies</a>
+    <a href="#" id="analytics-btn">Listening Report</a>
+    <a href="#" id="customization-btn">Customize</a>
+
+  </nav>
+
+  <div class="section-container">
+    <div class="image-container">
+      <img src="images/boy1.png" class="image-1" alt="First Image">
+    </div>
+
+    <div class="text-container">
+      <h2>Profile</h2>
+      <p class="para-4">
+        Currently listening to: </p>
+        <p>Buddies : 11</p>
+        <p>Scrobble count: 33,546</p>
+    </div>
+  </div>
+
+  <div id="customization-content">
+    <h2>Select your Avatar</h2>
+    <p>Choose</p>
+    <img src="images/lobby.png" alt="imagechoose"
+   <div>
+    <h2>Settings</h2>
+    <p>ID: John Doe</p>
+    <p>email: John Doe</p>
+    <p>Linked with: Spotify</p>
+  </div>
+  </div>
+
+  <div id="analytics-content">
+    <h2>Your Music Analytics</h2>
+    <p>Top Tracks This Month</p>
+    <p>1. Sade - Maureen</p>
+    <p>Top Artists</p>
+    <p>Top Albums</p>
+  </div>
+
+  <div id="friends-content">
+    <h2>Your Buddies</h2>
+    <p>BFF Lobby</p>
+    <p>Friends List</p>
+    <p>Blair</p>
+    <p>Blair is currently listening to: Sorry I Kept You - Twinz</p>
+    <p>View full profile</p>
+  </div>
+
+</body>
+</html>

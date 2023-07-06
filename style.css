@@ -29,11 +29,12 @@ h1 {
 
 .image-container {
   width: 30%;
-  text-align: center;
+  padding: 0%;
+  padding-left: 10%;
 }
 
 .image-1 {
-  max-width: 400px;
+  max-width: 0px;
   height: auto;
   border-radius:5px;
   padding-left: 10%;

@@ -5,6 +5,52 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    // Function to handle form submission
+    function signUpFormSubmit(event) {
+      event.preventDefault();
+      
+      // Perform form validation
+      var nickname = document.getElementById("nickname").value;
+      var email = document.getElementById("email").value;
+      if (nickname && email) {
+        // Redirect to user profile page
+        window.location.href = "indexuser.html";
+      } else {
+        alert("Please fill in all the required fields.");
+      }
+    }
+
+    // Function to handle social login button click
+    function socialLoginRedirect(provider) {
+      // Redirect to the authorization site
+      switch (provider) {
+        case "spotify":
+
+          window.location.href = "http://localhost:3000/callback";
+          var client_id = 'CLIENT_ID';
+var redirect_uri = 'http://localhost:8888/callback';
+
+var app = express();
+
+app.get('/login', function(req, res) {
+
+  var state = generateRandomString(16);
+  var scope = 'user-read-private user-read-email';
+
+  res.redirect('https://accounts.spotify.com/authorize?' +
+    querystring.stringify({
+      response_type: 'code',
+      client_id: client_id,
+      scope: scope,
+      redirect_uri: redirect_uri,
+      state: state
+    }));
+});
+
+      }
+    }
+  </script>
 </head>
 <body class="bg-gray-100">
   <div class="container mx-auto p-8">
@@ -13,7 +59,7 @@
       <img src="images/girl.png" alt="Your Image" class="ml-auto">
     </div>
     <h1 class="text-2xl font-bold mb-4">Join Us</h1>
-    <form>
+    <form onsubmit="signUpFormSubmit(event)">
       <div class="mb-4">
         <label for="nickname" class="text-gray-700 font-medium">Nickname</label>
         <input type="text" id="nickname" name="nickname" required class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
@@ -29,9 +75,9 @@
     <div class="social-login">
       <p class="mb-2 text-gray-700">or Continue with:</p>
       <div class="social-buttons">
-        <button class="spotify-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium"><i class="fab fa-spotify mr-2"></i> Continue with Spotify</button>
-        <button class="apple-music-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium"><i class="fab fa-apple mr-2"></i> Continue with Apple Music</button>
-        <button class="google-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium"><i class="fab fa-google mr-2"></i> Continue with Google</button>
+        <button class="spotify-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium" onclick="socialLoginRedirect('spotify')"><i class="fab fa-spotify mr-2"></i> Continue with Spotify</button>
+        <button class="apple-music-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium" onclick="socialLoginRedirect('apple')"><i class="fab fa-apple mr-2"></i> Continue with Apple Music</button>
+        <button class="google-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium" onclick="socialLoginRedirect('google')"><i class="fab fa-google mr-2"></i> Continue with Google</button>
       </div>
     </div>
   </div>

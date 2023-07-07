@@ -1,96 +1,46 @@
-## Code Challenge 2 - Flataculties Web App
-This repository contains my submission for the school code challenge week 2 
-This mini web app allows users to vote for their favorite cute animals.
+# MyBud - User Profile
 
-## Table of Content
-- [Description](https://github.com/Mwasigwa2/CodeChallengeTwo#code-challenge-description)
-- [Installation Requirements](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-requirements)
-- [Installation Process](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
-- [Technology Used](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
-- [Project Structure](https://github.com/Mwasigwa2/CodeChallengeTwo#project-structure)
-- [License](https://github.com/Mwasigwa2/CodeChallengeTwo#license)
-- [Authors Info](https://github.com/Mwasigwa2/CodeChallengeTwo#author-info)
+![MyBud Logo](images/mybud-logo.png)
 
-## Code Challenge Description
-The challenge required me to demonstrate my knowledge of html5, css, javascript, DOM manipulation and Events through building an animal voting app
+MyBud is a web application that provides a user profile page to showcase your music listening report from Last.fm. It fetches data from the Last.fm API and displays your currently scrobbling track, top albums, top artists, and top songs.
 
-## Installation Requirements 
-- Either a computer, phone, tablet, or an Ipad
-- Access to the Internet
+## Features
 
-## Installation Process
+- Display your currently scrobbling track.
+- Show your top albums, artists, and songs.
+- Sleek and user-friendly design.
 
-**git clone the repository to your local machine using the command**
+## Installation
 
-```
-$ git@github.com:Mwasigwa2/CodeChallengeTwo.git
-```
+1. Clone the repository: `git clone https://github.com/your-username/mybud.git`
+2. Navigate to the project directory: `cd mybud`
+3. Open `index.html` in your preferred web browser.
 
-**Navigate to the project using the command cd**
-```
-$ 'cd CodeChallengetwo'
-```
-**Install json server tool with the following command**
-```
-$ 'npm install -g json server'
-```
+## Usage
 
-**Run the db json server file using the command**
+1. Open the application in your web browser.
+2. Enter your Last.fm API key and username in the appropriate fields.
+3. Click the "Load Data" button to fetch and display your music listening report.
+4. Enjoy exploring your currently scrobbling track, top albums, artists, and songs!
 
-```
-$ 'json server –watch db.json'
-```
+## Dependencies
 
-**Open index.html server and access index.html server using the following url***
+- Tailwind CSS v2.2.4 - [Link](https://tailwindcss.com/)
+- Inter font from Google Fonts - [Link](https://fonts.google.com/specimen/Inter)
 
-```
-localhost:/3000.index.html
-```
+## Screenshots
 
+![MyBud User Profile](images/mybud-screenshot.png)
 
-## Technologies Used
-This challenge was mainly based on
-- JavaScript
-- HTML
-- CSS
-- JSON
-- [Netlify](https://www.netlify.com/)
-- [Imgur](https://imgur.com/)
-  
-## Project Structure
-  The project contains the following files:
-  - index.html
-  - style.css
-  - db json
-  - settings.json
-  - package.lock.json
-  - package.json
-  - README.md
+## API Reference
+
+This application utilizes the Last.fm API to fetch music data. You will need to sign up for a Last.fm API key to use this application. Follow the instructions in the code to replace `YOUR_API_KEY` with your actual Last.fm API key.
+
 ## License
-MIT License
-Copyright (c) [2023] [Gathirimu Mwasigwa]
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Acknowledgements
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-## Author info
-Gathirimu Mwasigwa
-## Contact Info
-Email: [gathirimu.mwasigwa@student.moringaschool.com]
-
-[**Navigate back to top**](https://github.com/Mwasigwa2/CodeChallengeTwo)
+- The MyBud logo was created using [Canva](https://www.canva.com/).
+- Special thanks to the Tailwind CSS and Last.fm API communities for their excellent documentation and resources.

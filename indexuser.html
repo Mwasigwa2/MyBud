@@ -4,370 +4,229 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-  <title>MyBud</title>
-</head>
-<header class="header-1">
-<h1>MyBud</h1>
-</header>
-
-<nav class="navbar">
-  <a href="#" id="profile-btn">Profile</a>
-  <a href="#" id="friends-btn">Buddies</a>
-  <a href="#" id="analytics-btn">Listening Report</a>
-  <a href="#" id="customization-btn">Customize</a>
-</nav>
-
-<div class="section-container">
-  <div class="image-container">
-    <img src="images/boy1.png" class="image-1" alt="First Image">
-  </div>
-
-  <div class="text-container">
-    <h2>Profile</h2>
-    <p id="profile-scrobbles"></p>
-    <p class="para-4">
-      <h2>Recent Tracks</h2>
-      <div id="recent-tracks-container"></div>
-    
-      <h2>Top Albums</h2>
-      <div id="top-albums-container"></div>
-    
-      <h2>Top Artists</h2>
-      <div id="top-artists-container"></div>
-    
-      <h2>Top Songs</h2>
-      <div id="top-songs-container"></div>
-    </head>
-    </p>
-   
-  </div>
-</div>
-
-<div id="customization-content">
-  <h2>Select your Avatar</h2>
-  <p>Choose</p>
-  <img src="images/lobby.png" alt="imagechoose">
-  <div>
-    <h2>Settings</h2>
-    <p>ID: John Doe</p>
-    <p>email: John Doe</p>
-</div>
-
-<div id="analytics-content">
-  <h2>Select your Avatar</h2>
-  <p>Choose</p>
-  <img src="images/lobby.png" alt="imagechoose">
-  <div>
-    <h2>Settings</h2>
-    <p>ID: John Doe</p>
-    <p>email: John Doe</p>
-</div>
-
-
-<div id="friends-content">
-  <h2>Select your Avatar</h2>
-  <p>Choose</p>
-  <img src="images/lobby.png" alt="imagechoose">
-  <div>
-    <h2>Settings</h2>
-    <p>ID: John Doe</p>
-    <p>email: John Doe</p>
-</div>
+  <title>MyBud - User Profile</title>
   <style>
-.section-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .section-container > div {
-      margin-right: 20px;
-    }
-
-    .section-container h2 {
-      margin: 0;
-      font-size: 24px;
-      margin-bottom: 10px;
-      margin-top: 0%;
-      text-align: center;
-      font-size: 500%;
-    }
-
-    .section-container .para-4 {
-      margin: 0;
-      font-size: 16px;
-      font-size: 110%;
-      padding-right: 10%;
-    }
-
-    .section-container .para-4,
-    .section-container #profile-scrobbles,
-    .section-container h2 {
-      font-size: 100%;
-    }
 body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-    
-    .header-1 {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 400%;
-    }
-    
-    h1 {
-      margin: 0;
-    }
-    
-    .section-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-    
-    .image-container {
-      margin-right: 20px;
-    }
-    
-    .image-1 {
-      width: 510px;
-      height: auto;
-    }
-    
-    .text-container {
-      text-align: left;
-    }
-    
-    h2 {
-      margin: 0;
-      font-size: 24px;
-      margin-bottom: 10px;
-      margin-top: 0%;
-      text-align: center;
-      font-size: 500%;
-    }
-    
-    .para-4 {
-      margin: 0;
-      font-size: 16px;
-      font-size: 110%;
-      padding-right: 10%;
-    }
-    
-    .navbar {
-      background-color: #333;
-      padding: 10px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      font-size: 16px;
-      color: #fff;
-    }
-    
-    .navbar a {
-      text-decoration: none;
-      color: #fff;
-    }
-    
-    #customization-content {
-      display: none;
-      background-color: #f1f1f1;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    #analytics-content {
-      display: none;
-      background-color: #f1f1f1;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    #friends-content {
-      display: none;
-      background-color: #f1f1f1;
-      padding: 20px;
-      text-align: center;
-    }
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-</style>
-<script>
+.header-1 {
+  background-color: #fff;
+  padding: 0;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.image-container {
+  width: 115%;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.image-1 {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.text-container {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.navbar {
+  background-color: blue;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  width: 56%;
+  margin-left: 22%;
+  font-size: 14.5rem;
+  color: black;
+}
+
+.section-container > div {
+  margin-right: 0;
+}
+
+.section-container h2 {
+  font-size: 1.5rem;
+}
+
+.section-container .para-4,
+.section-container #profile-scrobbles,
+.section-container h2 {
+  font-size: 100%;
+  padding-left: 0;
+}
+
+.section-container:first-child {
+  background-color: yellow;
+}
+
+.section-container:nth-child(2) {
+  background-color: blue;
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="header-1">
+    <h1>MyBud</h1>
+  </header>
+
+  <nav class="navbar">
+    <p>Listening Report</p>
+  </nav>
+
+  <div class="section-container">
+    <div class="image-container">
+      <img src="images/lobby.png" class="image-1" alt="First Image">
+    </div>
+
+    <div class="text-container">
+      <p id="profile-scrobbles"></p>
+      <div class="para-4">
+        <h2>Currently Scrobbling</h2>
+        <div id="recent-tracks-container"></div>
+      
+        <h2>Your Top Albums</h2>
+        <div id="top-albums-container"></div>
+      
+        <h2>Your Top Artists</h2>
+        <div id="top-artists-container"></div>
+      
+        <h2>Your Top Songs</h2>
+        <div id="top-songs-container"></div>
+      </div>
+    </div>
+  </div>
+  <script>
     document.addEventListener("DOMContentLoaded", async function() {
-      const profileButton = document.getElementById("profile-btn");
-      const customizationButton = document.getElementById("customization-btn");
-      const analyticsButton = document.getElementById("analytics-btn");
-      const friendsButton = document.getElementById("friends-btn");
-      const customizationContent = document.getElementById("customization-content");
-      const analyticsContent = document.getElementById("analytics-content");
-      const friendsContent = document.getElementById("friends-content");
-
-      profileButton.addEventListener("click", function() {
-        customizationContent.style.display = "none";
-        analyticsContent.style.display = "none";
-        friendsContent.style.display = "none";
-      });
-
-      customizationButton.addEventListener("click", function() {
-        customizationContent.style.display = "block";
-        analyticsContent.style.display = "none";
-        friendsContent.style.display = "none";
-      });
-
-      analyticsButton.addEventListener("click", async function() {
-        customizationContent.style.display = "none";
-        friendsContent.style.display = "none";
-        analyticsContent.style.display = "block";
-
-        const topTracks = await getTopTracks();
-        const topTracksContainer = document.createElement("div");
-        topTracksContainer.innerHTML = "<h2>Your Music Analytics</h2><p>Top Tracks This Month</p>";
-
-        topTracks.forEach((track, index) => {
-          const trackName = track.name;
-          const artists = track.artists.map(artist => artist.name).join(', ');
-          const trackElement = document.createElement("p");
-          trackElement.innerText = `${index + 1}. ${artists} - ${trackName}`;
-          topTracksContainer.appendChild(trackElement);
-        });
-
-        analyticsContent.appendChild(topTracksContainer);
-      });
-
-      friendsButton.addEventListener("click", function() {
-        customizationContent.style.display = "none";
-        analyticsContent.style.display = "none";
-        friendsContent.style.display = "block";
-      });
-
-      async function getTopTracks() {
-        const token = 'BQDYElJcPq1zoVI7bKQ0J3QkxZTt4j3AM1X5m4o1_xT91LjgoDqN84TRVp_KXkyHDOcucuCGANqZB7l3vpOeKggAsPmrw8ZRgd57D7o4BJ2xpirPga6_LzTZ4JAStlQGWF18AzuyW2HFgtTsFWk5dfiDEAqr-3ey0GgUieYkaPdqU5jJlV_r-MfkgJmIwFXt3tu9tBOtP0dWIPRXNMcS7uv6UIWIYTC65XQlvakyyI5zCB-JlQG4iJOibNS0JcCYa-QDYYVFbJvx-Bvxoz0lEopF';
-        const response = await fetch(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5`, {
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        });
-        const data = await response.json();
-        return data.items;
+      // Function to fetch data from Last.fm API
+      async function fetchLastFmAPI(url) {
+        const response = await fetch(url);
+        return await response.json();
       }
 
-      async function getScrobbleCount() {
-        const username = 'mars_end'; 
+      // Function to display recent tracks
+      async function displayRecentTracks() {
         const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
+        const username = 'mars_end';
 
-        const response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${username}&api_key=${apiKey}&format=json`);
-        const data = await response.json();
+        // Fetch recent tracks from Last.fm API
+        const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=6`;
+        const response = await fetchLastFmAPI(url);
+        const recentTracks = response.recenttracks.track;
 
-        return data.user.playcount;
+        // Display recent tracks in HTML
+        const recentTracksContainer = document.getElementById('recent-tracks-container');
+        recentTracksContainer.innerHTML = '';
+
+        recentTracks.forEach(track => {
+          const trackElement = document.createElement('p');
+          trackElement.textContent = `${track.name} by ${track.artist['#text']}`;
+          recentTracksContainer.appendChild(trackElement);
+        });
       }
 
-      const scrobbleCount = await getScrobbleCount();
-      const profileScrobbles = document.getElementById("profile-scrobbles");
-      profileScrobbles.innerText = `Scrobble count: ${scrobbleCount}`;
+      // Function to display top albums
+      async function displayTopAlbums() {
+        const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
+        const username = 'mars_end';
+
+        // Fetch top albums from Last.fm API
+        const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=${username}&api_key=${apiKey}&format=json&limit=5`;
+        const response = await fetchLastFmAPI(url);
+        const topAlbums = response.topalbums.album;
+
+        // Display top albums in HTML
+        const topAlbumsContainer = document.getElementById('top-albums-container');
+        topAlbumsContainer.innerHTML = '';
+
+        topAlbums.forEach(album => {
+          const albumElement = document.createElement('p');
+          albumElement.textContent = album.name;
+          topAlbumsContainer.appendChild(albumElement);
+        });
+      }
+
+// Function to display top artists
+async function displayTopArtists() {
+  const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
+  const username = 'mars_end';
+
+  // Fetch top artists from Last.fm API
+  const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=${username}&api_key=${apiKey}&format=json&limit=5`;
+  const response = await fetchLastFmAPI(url);
+  const topArtists = response.topartists.artist;
+
+  // Display top artists in HTML
+  const topArtistsContainer = document.getElementById('top-artists-container');
+  topArtistsContainer.innerHTML = '';
+
+  topArtists.forEach(artist => {
+    const artistElement = document.createElement('p');
+    artistElement.textContent = artist.name;
+    topArtistsContainer.appendChild(artistElement);
+  });
+}
+
+
+      // Function to display top songs
+      async function displayTopSongs() {
+        const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
+        const username = 'mars_end';
+
+        // Fetch top songs from Last.fm API
+        const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${username}&api_key=${apiKey}&format=json&limit=5`;
+        const response = await fetchLastFmAPI(url);
+        const topSongs = response.toptracks.track;
+
+        // Display top songs in HTML
+        const topSongsContainer = document.getElementById('top-songs-container');
+        topSongsContainer.innerHTML = '';
+
+        topSongs.forEach(song => {
+          const songElement = document.createElement('p');
+          songElement.textContent = `${song.name} by ${song.artist.name}`;
+          topSongsContainer.appendChild(songElement);
+        });
+      }
+
+      // Call the display functions
+      displayRecentTracks();
+      displayTopAlbums();
+      displayTopArtists();
+      displayTopSongs();
     });
-  
-  
-    // Function to fetch data from Last.fm API
-   async function fetchLastFmAPI(url) {
-      const response = await fetch(url);
-      return await response.json();
-    }
-
-    // Function to display recent tracks
-    async function displayRecentTracks() {
-      const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-      const username = 'mars_end';
-      // Fetch recent tracks from Last.fm API
-      const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=5`;
-      const response = await fetchLastFmAPI(url);
-      const recentTracks = response.recenttracks.track;
-
-      // Display recent tracks in HTML
-      const recentTracksContainer = document.getElementById('recent-tracks-container');
-      recentTracksContainer.innerHTML = '';
-
-      recentTracks.forEach(track => {
-        const trackElement = document.createElement('p');
-        trackElement.textContent = `${track.name} by ${track.artist['#text']}`;
-        recentTracksContainer.appendChild(trackElement);
-      });
-    }
-
-    // Function to display top albums
-    async function displayTopAlbums() {
-      const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-      const username = 'mars_end';
-
-      // Fetch top albums from Last.fm API
-      const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=${username}&api_key=${apiKey}&format=json&limit=5`;
-      const response = await fetchLastFmAPI(url);
-      const topAlbums = response.topalbums.album;
-
-      // Display top albums in HTML
-      const topAlbumsContainer = document.getElementById('top-albums-container');
-      topAlbumsContainer.innerHTML = '';
-
-      topAlbums.forEach(album => {
-        const albumElement = document.createElement('p');
-        albumElement.textContent = album.name;
-        topAlbumsContainer.appendChild(albumElement);
-      });
-    }
-
-    // Function to display top artists
-    async function displayTopArtists() {
-      const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-      const username = 'mars_end';
-
-      // Fetch top artists from Last.fm API
-      const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=${username}&api_key=${apiKey}&format=json&limit=5`;
-      const response = await fetchLastFmAPI(url);
-      const topArtists = response.topartists.artist;
-
-      // Display top artists in HTML
-      const topArtistsContainer = document.getElementById('top-artists-container');
-      topArtistsContainer.innerHTML = '';
-
-      topArtists.forEach(artist => {
-        const artistElement = document.createElement('p');
-        artistElement.textContent = artist.name;
-        topArtistsContainer.appendChild(artistElement);
-      });
-    }
-
-    // Function to display top songs
-    async function displayTopSongs() {
-      const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-      const username = 'mars_end';
-
-      // Fetch top songs from Last.fm API
-      const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${username}&api_key=${apiKey}&format=json&limit=5`;
-      const response = await fetchLastFmAPI(url);
-      const topSongs = response.toptracks.track;
-
-      // Display top songs in HTML
-      const topSongsContainer = document.getElementById('top-songs-container');
-      topSongsContainer.innerHTML = '';
-
-      topSongs.forEach(song => {
-        const songElement = document.createElement('p');
-        songElement.textContent = `${song.name} by ${song.artist.name}`;
-        topSongsContainer.appendChild(songElement);
-      });
-    }
-
-    // Call the display functions
-    displayRecentTracks();
-    displayTopAlbums();
-    displayTopArtists();
-    displayTopSongs();
-</script>
+  </script>
 </body>
 </html>

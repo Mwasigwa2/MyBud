@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Authorization Flow Example</title>
+  <script>
+    // Step 1: Create the authorization URL
+    const clientId = 'cb884b6dab7044c4a458d8f232d7d2c5';
+    const redirectUri = 'YOUR_REDIRECT_URI';
+    const scopes = ['user-read-private', 'user-read-email']; // Specify the required scopes
+
+    const authorizationUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes.join(' '))}&response_type=code`;
+
+    // Step 2: Redirect users to the authorization URL
+    window.location.href = authorizationUrl;
+  </script>
+</head>
+<body>
+  <h1>Spotify Authorization Flow Example</h1>
+</body>
+</html>

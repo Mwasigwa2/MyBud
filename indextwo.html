@@ -1,85 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyBud Sign Up</title>
+  <title>MyBud User Profile</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    // Function to handle form submission
-    function signUpFormSubmit(event) {
-      event.preventDefault();
-      
-      // Perform form validation
-      var nickname = document.getElementById("nickname").value;
-      var email = document.getElementById("email").value;
-      if (nickname && email) {
-        // Redirect to user profile page
-        window.location.href = "indexuser.html";
-      } else {
-        alert("Please fill in all the required fields.");
+    // Function to fetch and display user's music stats
+    async function fetchUserStats() {
+      try {
+        // Replace with the actual API endpoint to fetch user's music stats
+        const apiUrl = 'https://api.last.fm/user/{username}/toptracks';
+
+        // Replace with the signed-up user's nickname or ID
+        const username = 'signed_up_user';
+
+        // Replace with your Last.fm API key
+        const apiKey = 'YOUR_LASTFM_API_KEY';
+
+        // Make API request to fetch user's music stats
+        const response = await axios.get(apiUrl.replace('{username}', username), {
+          params: {
+            api_key: apiKey,
+            limit: 10, // Number of top tracks to fetch
+            format: 'json'
+          }
+        });
+
+        const tracks = response.data.tracks.track;
+
+        // Display the user's music stats on the page
+        const statsContainer = document.getElementById('music-stats');
+        statsContainer.innerHTML = ''; // Clear previous content
+
+        for (const track of tracks) {
+          const trackName = track.name;
+          const artistName = track.artist.name;
+
+          const trackElement = document.createElement('div');
+          trackElement.classList.add('track-item');
+          trackElement.innerHTML = `
+            <span class="track-name">${trackName}</span> by <span class="artist-name">${artistName}</span>
+          `;
+
+          statsContainer.appendChild(trackElement);
+        }
+      } catch (error) {
+        console.error('Failed to fetch user stats:', error);
       }
     }
 
-    // Function to handle social login button click
-    function socialLoginRedirect(provider) {
-      // Redirect to the authorization site
-      switch (provider) {
-        case "spotify":
-
-          window.location.href = "http://localhost:3000/callback";
-          var client_id = 'CLIENT_ID';
-var redirect_uri = 'http://localhost:8888/callback';
-
-var app = express();
-
-app.get('/login', function(req, res) {
-
-  var state = generateRandomString(16);
-  var scope = 'user-read-private user-read-email';
-
-  res.redirect('https://accounts.spotify.com/authorize?' +
-    querystring.stringify({
-      response_type: 'code',
-      client_id: client_id,
-      scope: scope,
-      redirect_uri: redirect_uri,
-      state: state
-    }));
-});
-
-      }
-    }
+    // Fetch user's music stats when the page is loaded
+    document.addEventListener('DOMContentLoaded', fetchUserStats);
   </script>
 </head>
 <body class="bg-gray-100">
   <div class="container mx-auto p-8">
     <div class="flex items-center mb-8">
-      <a href="http://127.0.0.1:5501/indexhome.html" class="back-button text-gray-600 text-sm flex items-center"><i class="fas fa-arrow-left mr-2"></i> Back</a>
+      <a href="#" class="back-button text-gray-600 text-sm flex items-center"><i class="fas fa-arrow-left mr-2"></i> Back</a>
       <img src="images/girl.png" alt="Your Image" class="ml-auto">
     </div>
-    <h1 class="text-2xl font-bold mb-4">Join Us</h1>
-    <form onsubmit="signUpFormSubmit(event)">
-      <div class="mb-4">
-        <label for="nickname" class="text-gray-700 font-medium">Nickname</label>
-        <input type="text" id="nickname" name="nickname" required class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
-      </div>
-      <div class="mb-4">
-        <label for="email" class="text-gray-700 font-medium">Email</label>
-        <input type="email" id="email" name="email" required class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
-      </div>
-      <div class="mb-4">
-        <button type="submit" class="signup-button py-2 px-4 bg-blue-500 text-white rounded-md font-medium">Sign Up</button>
-      </div>
-    </form>
-    <div class="social-login">
-      <p class="mb-2 text-gray-700">or Continue with:</p>
-      <div class="social-buttons">
-        <button class="spotify-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium" onclick="socialLoginRedirect('spotify')"><i class="fab fa-spotify mr-2"></i> Continue with Spotify</button>
-        <button class="apple-music-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium" onclick="socialLoginRedirect('apple')"><i class="fab fa-apple mr-2"></i> Continue with Apple Music</button>
-        <button class="google-button flex items-center justify-center py-2 px-4 bg-white border border-gray-300 rounded-md text-gray-700 font-medium" onclick="socialLoginRedirect('google')"><i class="fab fa-google mr-2"></i> Continue with Google</button>
-      </div>
+    <h1 class="text-2xl font-bold mb-4">User Profile</h1>
+    <div id="music-stats" class="mb-4">
+      <!-- Music stats will be dynamically added here -->
     </div>
   </div>
 </body>
 </html>
+
+

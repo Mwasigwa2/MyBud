@@ -1,0 +1,15 @@
+{
+    "name": "MyBud",
+    "version": "1.0.0",
+    "description": "All new and fun music scrobbling app",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "author": "Gathirimu Mwasigwa",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
+  

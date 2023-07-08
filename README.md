@@ -3,12 +3,12 @@
 MyBud is a web application that provides a music profile page to showcase your music listening report from Last.fm. It consists of two main pages: the Home page (indexhome.html) and the Join Us page (indextwo.html).
 
 ## Features
-# Home Page (indexhome.html)
+# Home Page
 Display your currently scrobbling track.
 Show your top albums, artists, and songs.
 Fetch and display data from the Last.fm API.
 User-friendly interface with a sleek design.
-# Join Us Page (indextwo.html)
+# Join Us Page
 Sign up to join the MyBud community.
 Input your personal information and music preferences.
 ## Installation
@@ -22,15 +22,17 @@ $ cd mybud
 ```
 Open indexhome.html or indextwo.html in your preferred web browser.
 ## Usage
+
 Open the desired page (indexhome.html or indextwo.html) in your web browser.
 Explore the features and functionalities of the respective page.
 Customize and personalize your music profile based on your preferences.
 Enjoy the music listening report and interact with the MyBud community.
 ## Dependencies
-Tailwind CSS v2.2.4 - Link
-Inter font from Google Fonts - Link
+
+Tailwind CSS v2.2.4
+Inter font from Google Fonts
 ## Screenshots
-MyBud Home Page
+MyBud 
 
 ## MyBud Join Us Page
 
@@ -41,5 +43,5 @@ This application utilizes the Last.fm API to fetch music data. You will need to 
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ## Acknowledgments
-The MyBud logo was created using Canva.
+
 Special thanks to the Tailwind CSS and Last.fm API communities for their excellent documentation and resources.

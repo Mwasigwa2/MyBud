@@ -1,6 +1,6 @@
 ## MyBud - Music Scrobbling Application
 
-MyBud is a web application that provides a music profile page to showcase your music listening report from Last.fm. It consists of two main pages: the Home page (indexhome.html) and the Join Us page (indextwo.html).
+MyBud is a web application that provides a music profile page to showcase your music listening report fetching data from the public last.fm API. 
 
 ## Features
 # Home Page

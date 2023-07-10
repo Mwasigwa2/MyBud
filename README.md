@@ -19,15 +19,18 @@ $ cd mybud
 $ 'code'
 ```
 
-## Screenshots
-[file:///home/mwasigwa/Downloads/127.0.0.1_5501_indexuser.html_nickname=mars_end&email=ts.natives%2540gmail.com(Samsung%20Galaxy%20S20%20Ultra).png](https://github.com/Mwasigwa2/MyBud/issues/1#issue-1796853638)
-
 ## API Reference
-This application utilizes the Last.fm API to fetch music data. You will need to sign up for a Last.fm API key to use this application. Follow the instructions in the code to replace YOUR_API_KEY with your actual Last.fm API key.
+This application utilizes the Last.fm API to fetch music data. **You will need to sign up for a Last.fm API key to use this application. Follow the instructions in the code to replace YOUR_API_KEY with your actual Last.fm API key**
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+MIT License Copyright (c) [2023] [Gathirimu Mwasigwa]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Acknowledgments
 
-Special thanks to the Tailwind CSS and Last.fm API communities for their excellent documentation and resources.
+Special thanks to Last.fm API communities for their excellent documentation and resources.

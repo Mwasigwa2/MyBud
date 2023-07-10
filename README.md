@@ -22,7 +22,7 @@ simple minimalistic user-friendly interface with a sleek design, enjoy the music
 - Either a computer, phone, tablet, or an Ipad
 - Access to the Internet
 
-## Installation
+## Installation Process
 Clone this repository: 
 ```
 $ 'git clone git@github.com:Mwasigwa2/MyBud.git'

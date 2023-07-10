@@ -20,7 +20,7 @@ $ 'code'
 ```
 
 ## Screenshots
-file:///home/mwasigwa/Downloads/127.0.0.1_5501_indexuser.html_nickname=mars_end&email=ts.natives%2540gmail.com(Samsung%20Galaxy%20S20%20Ultra).png
+[file:///home/mwasigwa/Downloads/127.0.0.1_5501_indexuser.html_nickname=mars_end&email=ts.natives%2540gmail.com(Samsung%20Galaxy%20S20%20Ultra).png](https://github.com/Mwasigwa2/MyBud/issues/1#issue-1796853638)
 
 ## API Reference
 This application utilizes the Last.fm API to fetch music data. You will need to sign up for a Last.fm API key to use this application. Follow the instructions in the code to replace YOUR_API_KEY with your actual Last.fm API key.

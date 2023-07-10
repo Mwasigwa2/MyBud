@@ -43,7 +43,7 @@ This challenge was mainly based on
 - CSS
 - JSON
 - GH Pages
-- 
+  
 ## Project Structure
   The project contains the following files:
   - indextwo.html

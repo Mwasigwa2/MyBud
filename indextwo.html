@@ -16,7 +16,7 @@
       var email = document.getElementById("email").value;
       if (nickname && email) {
         // Redirect to user profile page with query parameters
-        var redirectURL = "indexuser.html?nickname=" + encodeURIComponent(nickname) + "&email=" + encodeURIComponent(email);
+        var redirectURL = "indexuser.html?username=" + encodeURIComponent(nickname);
         window.location.href = redirectURL;
       } else {
         alert("You missed something!.");
@@ -33,11 +33,11 @@
     <h1 class="text-2xl font-bold mb-4">MyBud</h1>
     <form onsubmit="signUpFormSubmit(event)">
       <div class="mb-4">
-        <label for="nickname" class="text-gray-700 font-medium">Nickname</label>
+        <label for="nickname" class="text-gray-700 font-medium">Your lastfm Username</label>
         <input type="text" id="nickname" name="nickname" required class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
       </div>
       <div class="mb-4">
-        <label for="email" class="text-gray-700 font-medium">Email</label>
+        <label for="email" class="text-gray-700 font-medium">Your Email</label>
         <input type="email" id="email" name="email" required class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
       </div>
       <div class="mb-4">
@@ -47,3 +47,4 @@
   </div>
 </body>
 </html>
+

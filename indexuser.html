@@ -93,8 +93,6 @@ p {
 .section-container:nth-child(2) {
   background-color: blue;
 }
-
-
   </style>
 </head>
 <body>
@@ -108,7 +106,7 @@ p {
 
   <div class="section-container">
     <div class="image-container">
-      <img src="images/lobby.png" class="image-1" alt="First Image">
+      <img src="" class="image-1" alt="First Image">
     </div>
 
     <div class="text-container">
@@ -128,6 +126,7 @@ p {
       </div>
     </div>
   </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", async function() {
       // Function to fetch data from Last.fm API
@@ -137,11 +136,10 @@ p {
       }
 
       // Function to display recent tracks
-      async function displayRecentTracks() {
+      async function displayRecentTracks(username) {
         const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-        const username = 'mars_end';
 
-        // Fetch recent tracks from Last.fm API
+        // Fetch recent tracks from Last.fm API for the specified username
         const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=6`;
         const response = await fetchLastFmAPI(url);
         const recentTracks = response.recenttracks.track;
@@ -158,11 +156,9 @@ p {
       }
 
       // Function to display top albums
-      async function displayTopAlbums() {
-        const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-        const username = 'mars_end';
-
-        // Fetch top albums from Last.fm API
+      async function displayTopAlbums(username) {
+        const apiKey = '27b70ae850f22fb9ced161e9fdfed287'; 
+        // Fetch top albums from Last.fm API for the specified username
         const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=${username}&api_key=${apiKey}&format=json&limit=5`;
         const response = await fetchLastFmAPI(url);
         const topAlbums = response.topalbums.album;
@@ -178,34 +174,31 @@ p {
         });
       }
 
-// Function to display top artists
-async function displayTopArtists() {
-  const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-  const username = 'mars_end';
+      // Function to display top artists
+      async function displayTopArtists(username) {
+        const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
 
-  // Fetch top artists from Last.fm API
-  const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=${username}&api_key=${apiKey}&format=json&limit=5`;
-  const response = await fetchLastFmAPI(url);
-  const topArtists = response.topartists.artist;
+        // Fetch top artists from Last.fm API for the specified username
+        const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=${username}&api_key=${apiKey}&format=json&limit=5`;
+        const response = await fetchLastFmAPI(url);
+        const topArtists = response.topartists.artist;
 
-  // Display top artists in HTML
-  const topArtistsContainer = document.getElementById('top-artists-container');
-  topArtistsContainer.innerHTML = '';
+        // Display top artists in HTML
+        const topArtistsContainer = document.getElementById('top-artists-container');
+        topArtistsContainer.innerHTML = '';
 
-  topArtists.forEach(artist => {
-    const artistElement = document.createElement('p');
-    artistElement.textContent = artist.name;
-    topArtistsContainer.appendChild(artistElement);
-  });
-}
-
+        topArtists.forEach(artist => {
+          const artistElement = document.createElement('p');
+          artistElement.textContent = artist.name;
+          topArtistsContainer.appendChild(artistElement);
+        });
+      }
 
       // Function to display top songs
-      async function displayTopSongs() {
+      async function displayTopSongs(username) {
         const apiKey = '27b70ae850f22fb9ced161e9fdfed287';
-        const username = 'mars_end';
 
-        // Fetch top songs from Last.fm API
+        // Fetch top songs from Last.fm API for the specified username
         const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${username}&api_key=${apiKey}&format=json&limit=5`;
         const response = await fetchLastFmAPI(url);
         const topSongs = response.toptracks.track;
@@ -221,11 +214,31 @@ async function displayTopArtists() {
         });
       }
 
-      // Call the display functions
-      displayRecentTracks();
-      displayTopAlbums();
-      displayTopArtists();
-      displayTopSongs();
+      // Add event listeners
+      document.getElementById('profile-scrobbles').addEventListener('click', () => {
+        console.log('Profile Scrobbles clicked');
+        // Perform some action when the element is clicked
+      });
+
+      document.getElementById('top-albums-container').addEventListener('mouseover', () => {
+        console.log('Top Albums container hovered');
+        // Perform some action when the mouse hovers over the element
+      });
+
+      document.getElementById('top-songs-container').addEventListener('dblclick', () => {
+        console.log('Top Songs container double-clicked');
+        // Perform some action when the element is double-clicked
+      });
+
+      // Get the username from the URL query parameters
+      const params = new URLSearchParams(window.location.search);
+      const username = params.get('username');
+
+      // Call the display functions with the retrieved username
+      displayRecentTracks(username);
+      displayTopAlbums(username);
+      displayTopArtists(username);
+      displayTopSongs(username);
     });
   </script>
 </body>

@@ -4,23 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
   <title>MyBud - Home</title>
 </head>
 <body>
 
-  <header class="header-1">
-    <h1>MyBud</h1>
-    <nav>
-      <ul class="navbar">
-        <button><a href="indextwo.html">Join Us</a></button>
-      </ul>
+  <header class="bg-blue-500 py-4">
+    <nav class="container mx-auto">
+      <div class="flex items-center justify-center">
+        <a href="#" class="text-white text-2xl font-bold">MyBud</a>
+        <ul class="ml-auto">
+          <li><a href="indextwo.html" class="text-white">Join Us</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-<div>
-  <img class="image-3"   src="images/lobby.png" alt="lobby"
-</div>
+  <div class="container mx-auto">
+    <div class="flex items-center justify-center my-8">
+      <img src="images/lobby.png" class="w-1/2" alt="lobby">
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,13 +1,15 @@
 # MyBud - Music Scrobbling Application
 
 ## Table of Content
-- [Description](https://github.com/Mwasigwa2/CodeChallengeTwo#code-challenge-description)
-- [Installation Requirements](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-requirements)
+- [Description](https://github.com/Mwasigwa2/MyBud#description)
+- [Features ](https://github.com/Mwasigwa2/MyBud#features)
+- [Installation Requirements](https://github.com/Mwasigwa2/MyBud#installation-requirements)
 - [Installation Process](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
-- [Technology Used](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
-- [Project Structure](https://github.com/Mwasigwa2/CodeChallengeTwo#project-structure)
-- [License](https://github.com/Mwasigwa2/CodeChallengeTwo#license)
-- [Authors Info](https://github.com/Mwasigwa2/CodeChallengeTwo#author-info)
+- [Technologies Used](https://github.com/Mwasigwa2/MyBud#technologies-used)
+- [Project Structure](https://github.com/Mwasigwa2/MyBud#project-structure)
+- [License](https://github.com/Mwasigwa2/MyBud#license)
+- [Acknowledgements](https://github.com/Mwasigwa2/MyBud#acknowledgments)
+- [Authors Info](https://github.com/Mwasigwa2/MyBud#author-info)
 
 ## Description
 MyBud is a web application that provides a music profile page to showcase your music listening report fetching data from the public last.fm API. 

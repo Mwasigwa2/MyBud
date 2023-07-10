@@ -1,13 +1,11 @@
-## MyBud - Music Scrobbling Application
+# MyBud - Music Scrobbling Application
 
 MyBud is a web application that provides a music profile page to showcase your music listening report fetching data from the public last.fm API. 
 
-## Features
+# Features
 Display your currently scrobbling track., Show your top albums, artists, and songs,fetch and display data from the Last.fm API.
 simple minimalistic user-friendly interface with a sleek design.
-# Join Us Page
-Sign up to join the MyBud community.
-Input your personal information and music preferences.
+
 ## Installation
 Clone the repository: 
 ```

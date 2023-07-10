@@ -4,7 +4,7 @@
 - [Description](https://github.com/Mwasigwa2/MyBud#description)
 - [Features ](https://github.com/Mwasigwa2/MyBud#features)
 - [Installation Requirements](https://github.com/Mwasigwa2/MyBud#installation-requirements)
-- [Installation Process](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
+- [Installation Process](https://github.com/Mwasigwa2/MyBud#installation-process)
 - [Technologies Used](https://github.com/Mwasigwa2/MyBud#technologies-used)
 - [Project Structure](https://github.com/Mwasigwa2/MyBud#project-structure)
 - [License](https://github.com/Mwasigwa2/MyBud#license)

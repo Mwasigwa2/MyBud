@@ -2,9 +2,23 @@
 
 MyBud is a web application that provides a music profile page to showcase your music listening report fetching data from the public last.fm API. 
 
+## Table of Content
+- [Description](https://github.com/Mwasigwa2/CodeChallengeTwo#code-challenge-description)
+- [Installation Requirements](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-requirements)
+- [Installation Process](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
+- [Technology Used](https://github.com/Mwasigwa2/CodeChallengeTwo#installation-process)
+- [Project Structure](https://github.com/Mwasigwa2/CodeChallengeTwo#project-structure)
+- [License](https://github.com/Mwasigwa2/CodeChallengeTwo#license)
+- [Authors Info](https://github.com/Mwasigwa2/CodeChallengeTwo#author-info)
+
 ## Features
 Display your currently scrobbling track., Show your top albums, artists, and songs,fetch and display data from the Last.fm API.
 simple minimalistic user-friendly interface with a sleek design, enjoy the music listening report!
+
+## Installation Requirements 
+- Either a computer, phone, tablet, or an Ipad
+- Access to the Internet
+
 ## Installation
 Clone this repository: 
 ```
@@ -18,6 +32,23 @@ $ cd mybud
 ```
 $ 'code'
 ```
+
+## Technologies Used
+This challenge was mainly based on
+- JavaScript
+- HTML
+- CSS
+- JSON
+- GH Pages
+- 
+## Project Structure
+  The project contains the following files:
+  - indextwo.html
+  - indexhome.html
+  - indexuser.html
+  - style.css
+  - db json
+  - README.md
 
 ## API Reference
 This application utilizes the Last.fm API to fetch music data. **You will need to sign up for a Last.fm API key to use this application. Follow the instructions in the code to replace YOUR_API_KEY with your actual Last.fm API key**
@@ -34,3 +65,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Acknowledgments
 
 Special thanks to Last.fm API communities for their excellent documentation and resources.
+
+## Author info
+Gathirimu Mwasigwa

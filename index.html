@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: linear-gradient(120deg, #4f46e5, #6655b6, #795ca9, #91619b, #a8688e);
+      background-size: 800% 800%;
+      animation: gradientAnimation 12s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .section-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+  
+    .image-1 {
+      max-width: 0px;
+      height: auto;
+      border-radius: 5px;
+      padding-left: 10%;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      right: 0;
+      font-size: large;
+      margin-bottom: 5%;
+      margin-top: 0%;
+      font: 550;
+    }
+
+    .navbar button {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+      color: white;
+      background-color: #ffffff;
+      border: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <title>MyBud - Home</title>
+</head>
+<body>
+
+  <header class="bg-blue-500 py-4">
+    <nav class="container mx-auto">
+      <div class="flex items-center justify-center">
+        <a href="#" class="text-white text-2xl font-bold">MyBud</a>
+        <ul class="ml-auto">
+          <li><a href="indextwo.html" class="text-white">Join Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mx-auto">
+    <div class="flex items-center justify-center my-8">
+      <img src="images/lobby.png" class="w-1/2" alt="lobby">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
